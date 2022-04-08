@@ -11,6 +11,12 @@
 		75E037202800132E001D4428 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E0371F2800132E001D4428 /* ContentView.swift */; };
 		75E0372228001330001D4428 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75E0372128001330001D4428 /* Assets.xcassets */; };
 		75E0372528001330001D4428 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75E0372428001330001D4428 /* Preview Assets.xcassets */; };
+		75E0372F280013FB001D4428 /* waterApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E0372E280013FB001D4428 /* waterApiModel.swift */; };
+		75E0373128001828001D4428 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E0373028001828001D4428 /* ChatView.swift */; };
+		75E03733280018CD001D4428 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E03732280018CD001D4428 /* SettingView.swift */; };
+		75E0373528001A4F001D4428 /* MenuTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E0373428001A4F001D4428 /* MenuTabView.swift */; };
+		75E0373728002105001D4428 /* ChatLogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E0373628002105001D4428 /* ChatLogModel.swift */; };
+		75E037392800222C001D4428 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E037382800222C001D4428 /* ChatViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		75E0371F2800132E001D4428 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		75E0372128001330001D4428 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75E0372428001330001D4428 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		75E0372E280013FB001D4428 /* waterApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = waterApiModel.swift; sourceTree = "<group>"; };
+		75E0373028001828001D4428 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		75E03732280018CD001D4428 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		75E0373428001A4F001D4428 /* MenuTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTabView.swift; sourceTree = "<group>"; };
+		75E0373628002105001D4428 /* ChatLogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogModel.swift; sourceTree = "<group>"; };
+		75E037382800222C001D4428 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				75E0371D2800132E001D4428 /* how_about_your_waterfallApp.swift */,
-				75E0371F2800132E001D4428 /* ContentView.swift */,
+				75E0372D28001353001D4428 /* ViewModel */,
+				75E0372C2800134E001D4428 /* Model */,
+				75E0372B28001345001D4428 /* View */,
 				75E0372128001330001D4428 /* Assets.xcassets */,
 				75E0372328001330001D4428 /* Preview Content */,
 			);
@@ -65,6 +79,34 @@
 				75E0372428001330001D4428 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		75E0372B28001345001D4428 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				75E0371F2800132E001D4428 /* ContentView.swift */,
+				75E0373028001828001D4428 /* ChatView.swift */,
+				75E03732280018CD001D4428 /* SettingView.swift */,
+				75E0373428001A4F001D4428 /* MenuTabView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		75E0372C2800134E001D4428 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				75E0372E280013FB001D4428 /* waterApiModel.swift */,
+				75E0373628002105001D4428 /* ChatLogModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		75E0372D28001353001D4428 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				75E037382800222C001D4428 /* ChatViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +179,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75E0373728002105001D4428 /* ChatLogModel.swift in Sources */,
+				75E0373128001828001D4428 /* ChatView.swift in Sources */,
+				75E037392800222C001D4428 /* ChatViewModel.swift in Sources */,
+				75E03733280018CD001D4428 /* SettingView.swift in Sources */,
 				75E037202800132E001D4428 /* ContentView.swift in Sources */,
 				75E0371E2800132E001D4428 /* how_about_your_waterfallApp.swift in Sources */,
+				75E0373528001A4F001D4428 /* MenuTabView.swift in Sources */,
+				75E0372F280013FB001D4428 /* waterApiModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

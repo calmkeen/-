@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  SettingView.swift
 //  how about your waterfall
 //
 //  Created by calmkeen on 2022/04/08.
@@ -7,15 +7,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SettingView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Text("info: 제작자 나")
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct SettingView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SettingView()
     }
 }
