@@ -9,7 +9,11 @@ import SwiftUI
 
 struct SettingView: View {
     var body: some View {
-        Text("info: 제작자 나")
+        VStack {
+            Text("info: 제작자 나")
+            Text("문의 : iyunseong159@gmail")
+            Text("version : 1.0")
+        }
     }
 }
 
