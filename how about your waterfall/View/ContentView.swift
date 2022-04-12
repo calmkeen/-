@@ -8,16 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject private var requestAPI = RequestAPI.apicall
+    //var waterTemp: API
     var body: some View {
+        
         NavigationView{
-                        VStack{
-                            Image(systemName: "drop")
-                                .resizable()
-                                .frame(maxWidth: 200, maxHeight: 200)
-                            Text("온도 : 19")
-                                .padding()
-            
-                        }
+            List{
+            ForEach(requestAPI.info, id: \.self) { result in
+                Text(result.W_TEMP)
+            }
+            }
+            VStack{
+                Image(systemName: "drop")
+                    .resizable()
+                    .frame(maxWidth: 200, maxHeight: 200)
+                    .padding()
+                List{
+                    Text("a")
+                    ForEach(requestAPI.info, id: \.self) { result in
+                        Text(result.W_TEMP)
+                    }
+                }
+            }
+        }.onAppear {
+            requestAPI.loadData()
         }
     }
     
