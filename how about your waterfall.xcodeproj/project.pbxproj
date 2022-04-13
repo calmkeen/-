@@ -18,6 +18,7 @@
 		75E037392800222C001D4428 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E037382800222C001D4428 /* ChatViewModel.swift */; };
 		75E0373B2805495A001D4428 /* ApiCallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E0373A2805495A001D4428 /* ApiCallModel.swift */; };
 		75E0373D28055E8F001D4428 /* ApiLoadVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E0373C28055E8F001D4428 /* ApiLoadVM.swift */; };
+		75E140912806A2D50059E865 /* testVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E140902806A2D50059E865 /* testVIew.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		75E0373A2805495A001D4428 /* ApiCallModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCallModel.swift; sourceTree = "<group>"; };
 		75E0373C28055E8F001D4428 /* ApiLoadVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiLoadVM.swift; sourceTree = "<group>"; };
 		75E0373E28056546001D4428 /* how-about-your-waterfall-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "how-about-your-waterfall-Info.plist"; sourceTree = SOURCE_ROOT; };
+		75E140902806A2D50059E865 /* testVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testVIew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				75E0373028001828001D4428 /* ChatView.swift */,
 				75E03732280018CD001D4428 /* SettingView.swift */,
 				75E0373428001A4F001D4428 /* MenuTabView.swift */,
+				75E140902806A2D50059E865 /* testVIew.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			files = (
 				75E0373728002105001D4428 /* ChatLogModel.swift in Sources */,
 				75E0373128001828001D4428 /* ChatView.swift in Sources */,
+				75E140912806A2D50059E865 /* testVIew.swift in Sources */,
 				75E037392800222C001D4428 /* ChatViewModel.swift in Sources */,
 				75E03733280018CD001D4428 /* SettingView.swift in Sources */,
 				75E0373D28055E8F001D4428 /* ApiLoadVM.swift in Sources */,

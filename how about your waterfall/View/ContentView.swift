@@ -10,29 +10,33 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject private var requestAPI = RequestAPI.apicall
+    //@EnvironmentObject private var requestAPIFunc: RequestAPI
     //var waterTemp: API
+    
+    
     var body: some View {
         
         NavigationView{
-            List{
-            ForEach(requestAPI.info, id: \.self) { result in
-                Text(result.W_TEMP)
-            }
-            }
             VStack{
                 Image(systemName: "drop")
                     .resizable()
                     .frame(maxWidth: 200, maxHeight: 200)
                     .padding()
-                List{
+
+                HStack{
                     Text("a")
-                    ForEach(requestAPI.info, id: \.self) { result in
-                        Text(result.W_TEMP)
+                    ForEach(requestAPI.water, id: \.self){ result in
+                            Text(result.MSR_TIME)
+                            Text(result.SITE_ID)
+                            Text(result.W_TEMP)
+                        
                     }
+                    Text("a")
                 }
             }
-        }.onAppear {
-            requestAPI.loadData()
+        }
+        .onAppear {
+           // requestAPI.loadData()
         }
     }
     
