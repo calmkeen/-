@@ -8,6 +8,71 @@
 import SwiftUI
 import Combine
 
+
+// This file was generated from JSON Schema using quicktype, do not modify it directly.
+// To parse the JSON, add this file to your project and do:
+//
+//   let welcome = try? newJSONDecoder().decode(Welcome.self, from: jsonData)
+
+import Foundation
+
+// MARK: - Welcome
+struct Welcome: Codable {
+    let wposInformationTime: WPOSInformationTime
+    
+    enum CodingKeys: String, CodingKey {
+        case wposInformationTime = "WPOSInformationTime"
+    }
+}
+
+// MARK: - WPOSInformationTime
+struct WPOSInformationTime: Codable {
+    let listTotalCount: Int
+    let result: Result
+    let row: [Row]
+    
+    enum CodingKeys: String, CodingKey {
+        case listTotalCount = "list_total_count"
+        case result = "RESULT"
+        case row
+    }
+}
+
+// MARK: - Result
+struct Result: Codable {
+    let code, message: String
+    
+    enum CodingKeys: String, CodingKey {
+        case code = "CODE"
+        case message = "MESSAGE"
+    }
+}
+
+// MARK: - Row
+struct Row: Codable {
+    let msrDate, msrTime, siteID, wTemp: String
+    let wPh, wDo, wTn, wTp: String
+    let wToc, wPhen, wCN: String
+    
+    enum CodingKeys: String, CodingKey {
+        case msrDate = "MSR_DATE"
+        case msrTime = "MSR_TIME"
+        case siteID = "SITE_ID"
+        case wTemp = "W_TEMP"
+        case wPh = "W_PH"
+        case wDo = "W_DO"
+        case wTn = "W_TN"
+        case wTp = "W_TP"
+        case wToc = "W_TOC"
+        case wPhen = "W_PHEN"
+        case wCN = "W_CN"
+    }
+}
+
+
+
+//MARK: - 나누기
+
 struct apiResult: Codable{
     var code: String
     var message: String
@@ -51,50 +116,34 @@ func loadData() {
     }
     URLSession.shared.dataTask(with: url) { data, response, error in
         guard let data = data else{
-            return
+            return print("data =! data")
         }
         print("hey")
         
         let decoder = JSONDecoder()
         
+        let jsonString = String(data: data, encoding: .utf8)
+        print("한글\(jsonString)")
         
         do{
-//             let json = try
-//                decoder.decode(ApiTesting.self, from: data)
-//            print(json)
-            let error = try
-               decoder.decode(apiResult.self, from: data)
-            print(error)
-            print(error.code)
-            print(error.message)
+            
+            let json = try
+            decoder.decode(Row.self, from: data)
+            print(data)
+            print(json.)
+            print(json.msrDate)
+            print(json.msrTime)
+            print(json.siteID)
+            print(json.wTemp)
             print("error")
             print("왜안돼")
-//            print(json.W_TEMP)
-//            print(json.MSR_DATE)
-//            print(json.MSR_TIME)
-//            print(json.SITE_ID)
-//                print(json.MSR_DATE)
-//                print(json.W_TEMP)
-//                print(json.SITE_ID)
+            
         } catch {
-//            let error = try
-//               decoder.decode(apiResult.self, from: data)
-//            print(error.code)
-//            print(error.message)
+            
             print("error")
             
         }
         
-        //                        let result = try? JSONDecoder().decode(Res.self, from: data)
-        //                        if let result = result {
-        //                            print(result)
-        //                            result.api.forEach {
-        //                                print($0.MSR_TIME)
-        //                                print($0.SITE_ID)
-        //                                print($0.W_TEMP)
-        //                            }
-        //                        }
-        //
         
     }.resume()
 }
