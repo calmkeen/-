@@ -24,14 +24,14 @@ struct Results : Codable{
     let api: [API]
 }
 
-class RequestAPI: ObservableObject {
-    
-    @Published var water: [API] = []
-    init(){
-        loadData()
-    }
-    static let apicall = RequestAPI()
-    
+//class RequestAPI: ObservableObject {
+//
+//    @Published var water: [API] = []
+//    init(){
+//        loadData()
+//    }
+//    static let apicall = RequestAPI()
+//
 //    func loadData() {
 //        
 //        guard let url = URL(string: "http://openapi.seoul.go.kr:8088/595646644a73746f37377752577577/json/WPOSInformationTime/1/4/") else {
@@ -57,6 +57,6 @@ class RequestAPI: ObservableObject {
 //            
 //        }.resume()
 //    }
-}
+//}
 
 

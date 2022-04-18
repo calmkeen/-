@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		75362980280815030067CC8E /* almofireModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7536297F280815030067CC8E /* almofireModel.swift */; };
+		75BF44D2280D26BA0059B8B3 /* alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF44D1280D26BA0059B8B3 /* alamofire.swift */; };
 		75E0371E2800132E001D4428 /* how_about_your_waterfallApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E0371D2800132E001D4428 /* how_about_your_waterfallApp.swift */; };
 		75E037202800132E001D4428 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E0371F2800132E001D4428 /* ContentView.swift */; };
 		75E0372228001330001D4428 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75E0372128001330001D4428 /* Assets.xcassets */; };
@@ -19,9 +21,12 @@
 		75E0373B2805495A001D4428 /* ApiCallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E0373A2805495A001D4428 /* ApiCallModel.swift */; };
 		75E0373D28055E8F001D4428 /* ApiLoadVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E0373C28055E8F001D4428 /* ApiLoadVM.swift */; };
 		75E140912806A2D50059E865 /* testVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E140902806A2D50059E865 /* testVIew.swift */; };
+		B669978CBF5500A577FF2F19 /* Pods_how_about_your_waterfall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889364D2EEF9ACDFA2C4A5BA /* Pods_how_about_your_waterfall.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7536297F280815030067CC8E /* almofireModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = almofireModel.swift; sourceTree = "<group>"; };
+		75BF44D1280D26BA0059B8B3 /* alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alamofire.swift; sourceTree = "<group>"; };
 		75E0371A2800132E001D4428 /* how about your waterfall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "how about your waterfall.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75E0371D2800132E001D4428 /* how_about_your_waterfallApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = how_about_your_waterfallApp.swift; sourceTree = "<group>"; };
 		75E0371F2800132E001D4428 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +41,9 @@
 		75E0373C28055E8F001D4428 /* ApiLoadVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiLoadVM.swift; sourceTree = "<group>"; };
 		75E0373E28056546001D4428 /* how-about-your-waterfall-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "how-about-your-waterfall-Info.plist"; sourceTree = SOURCE_ROOT; };
 		75E140902806A2D50059E865 /* testVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testVIew.swift; sourceTree = "<group>"; };
+		889364D2EEF9ACDFA2C4A5BA /* Pods_how_about_your_waterfall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_how_about_your_waterfall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88DCB14AFD1D8594A6B3AED4 /* Pods-how about your waterfall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-how about your waterfall.release.xcconfig"; path = "Target Support Files/Pods-how about your waterfall/Pods-how about your waterfall.release.xcconfig"; sourceTree = "<group>"; };
+		B6351F2853C9946741C80D0D /* Pods-how about your waterfall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-how about your waterfall.debug.xcconfig"; path = "Target Support Files/Pods-how about your waterfall/Pods-how about your waterfall.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +51,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B669978CBF5500A577FF2F19 /* Pods_how_about_your_waterfall.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21531D21D30E979D45EE57D8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B6351F2853C9946741C80D0D /* Pods-how about your waterfall.debug.xcconfig */,
+				88DCB14AFD1D8594A6B3AED4 /* Pods-how about your waterfall.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		75E037112800132E001D4428 = {
 			isa = PBXGroup;
 			children = (
 				75E0371C2800132E001D4428 /* how about your waterfall */,
 				75E0371B2800132E001D4428 /* Products */,
+				21531D21D30E979D45EE57D8 /* Pods */,
+				D34AF4DEDFFB634679168EC1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +124,8 @@
 			children = (
 				75E0373628002105001D4428 /* ChatLogModel.swift */,
 				75E0373A2805495A001D4428 /* ApiCallModel.swift */,
+				7536297F280815030067CC8E /* almofireModel.swift */,
+				75BF44D1280D26BA0059B8B3 /* alamofire.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -117,6 +139,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		D34AF4DEDFFB634679168EC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				889364D2EEF9ACDFA2C4A5BA /* Pods_how_about_your_waterfall.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -124,9 +154,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75E0372828001330001D4428 /* Build configuration list for PBXNativeTarget "how about your waterfall" */;
 			buildPhases = (
+				49321A2318C74554D2D6399B /* [CP] Check Pods Manifest.lock */,
 				75E037162800132E001D4428 /* Sources */,
 				75E037172800132E001D4428 /* Frameworks */,
 				75E037182800132E001D4428 /* Resources */,
+				51FF471790FD2ABDDAC3CA6B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -182,6 +214,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		49321A2318C74554D2D6399B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-how about your waterfall-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51FF471790FD2ABDDAC3CA6B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-how about your waterfall/Pods-how about your waterfall-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-how about your waterfall/Pods-how about your waterfall-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-how about your waterfall/Pods-how about your waterfall-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		75E037162800132E001D4428 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -191,11 +265,13 @@
 				75E0373128001828001D4428 /* ChatView.swift in Sources */,
 				75E140912806A2D50059E865 /* testVIew.swift in Sources */,
 				75E037392800222C001D4428 /* ChatViewModel.swift in Sources */,
+				75362980280815030067CC8E /* almofireModel.swift in Sources */,
 				75E03733280018CD001D4428 /* SettingView.swift in Sources */,
 				75E0373D28055E8F001D4428 /* ApiLoadVM.swift in Sources */,
 				75E037202800132E001D4428 /* ContentView.swift in Sources */,
 				75E0371E2800132E001D4428 /* how_about_your_waterfallApp.swift in Sources */,
 				75E0373528001A4F001D4428 /* MenuTabView.swift in Sources */,
+				75BF44D2280D26BA0059B8B3 /* alamofire.swift in Sources */,
 				75E0373B2805495A001D4428 /* ApiCallModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,6 +395,7 @@
 		};
 		75E0372928001330001D4428 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6351F2853C9946741C80D0D /* Pods-how about your waterfall.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -349,6 +426,7 @@
 		};
 		75E0372A28001330001D4428 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88DCB14AFD1D8594A6B3AED4 /* Pods-how about your waterfall.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

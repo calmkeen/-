@@ -13,10 +13,10 @@ struct MenuTabView: View {
         NavigationView{
 
             TabView {
-                ContentView().tabItem{
-                    Image(systemName: "drop")
-                    Text("수온")
-                }
+//                ContentView().tabItem{
+//                    Image(systemName: "drop")
+//                    Text("수온")
+//                }
                 ChatView().tabItem{
                     Image(systemName: "message")
                     Text("한강 어때요?")
