@@ -1,62 +1,92 @@
-//
-//  ApiCall.swift
-//  how about your waterfall
-//
-//  Created by calmkeen on 2022/04/12.
-//
-//url = http://openapi.seoul.go.kr:8088/595646644a73746f37377752577577/json/how_about_your_waterfall/1/1/
-
-import Foundation
+import SwiftUI
 import Combine
 
 
-//한강물 api
-struct API : Codable, Hashable{
-    var MSR_TIME : String
-    var SITE_ID: String
-    var W_TEMP:String
-}
-let url: String = "595646644a73746f37377752577577"
-//url = 595646644a73746f37377752577577
-//예시
-//https://data.seoul.go.kr/dataList/OA-15488/S/1/datasetView.do;jsessionid=52E023ECEBCEE40C12AF350F55FEE2D2.new_portal-svr-21
-struct Results : Codable{
-    let api: [API]
+// MARK: - Welcome
+struct Welcome: Codable {
+    let wposInformationTime: WPOSInformationTime
+
+    enum CodingKeys: String, CodingKey {
+        case wposInformationTime = "WPOSInformationTime"
+    }
 }
 
-//class RequestAPI: ObservableObject {
-//
-//    @Published var water: [API] = []
-//    init(){
-//        loadData()
-//    }
-//    static let apicall = RequestAPI()
-//
-//    func loadData() {
-//        
-//        guard let url = URL(string: "http://openapi.seoul.go.kr:8088/595646644a73746f37377752577577/json/WPOSInformationTime/1/4/") else {
-//            fatalError("Invalid URL")
-//        }
-//        
-//        URLSession.shared.dataTask(with: url) { data, response, error in
-//            guard let data = data, error == nil else {
-//                return
-//            }
-//            
-//            let result = try? JSONDecoder().decode(Results.self, from: data)
-//            if let result = result {
-//                print(result)
-//                
-//                result.api.forEach {
-//                    print($0.MSR_TIME)
-//                    print($0.SITE_ID)
-//                    print($0.W_TEMP)
-//                }
-//            }
-//            
-//            
-//        }.resume()
-//    }
-//}
+// MARK: - WPOSInformationTime
+struct WPOSInformationTime: Codable {
+    let listTotalCount: Int
+    let result: Result
+    let row: [Row]
+
+    enum CodingKeys: String, CodingKey {
+        case listTotalCount = "list_total_count"
+        case result = "RESULT"
+        case row
+    }
+}
+
+// MARK: - Result
+struct Result: Codable {
+    let code, message: String
+
+    enum CodingKeys: String, CodingKey {
+        case code = "CODE"
+        case message = "MESSAGE"
+    }
+}
+
+// MARK: - Row
+struct Row: Codable {
+    let msrDate, msrTime, siteID, wTemp: String
+
+    enum CodingKeys: String, CodingKey {
+        case msrDate = "MSR_DATE"
+        case msrTime = "MSR_TIME"
+        case siteID = "SITE_ID"
+        case wTemp = "W_TEMP"
+    }
+}
+
+ 
 
 
+struct testView: View {
+     var body: some View {
+        Button(action: loadData) {
+            Text("Button")
+        }
+
+     }
+ }
+
+func loadData() {
+    
+    guard let url = URL(string: "http://openapi.seoul.go.kr:8088/595646644a73746f37377752577577/json/WPOSInformationTime/1/1/") else {
+        fatalError("Invalid URL")
+    }
+    
+    URLSession.shared.dataTask(with: url) { data, response, error in
+        guard let data = data, error == nil else {
+            return
+        }
+        
+        let result = try? JSONDecoder().decode(Welcome.self, from: data)
+        if let result = result {
+            print(result.wposInformationTime.listTotalCount)
+            result.wposInformationTime.row.forEach {
+                print($0.wTemp)
+                print($0.msrDate)
+                print($0.siteID)
+            }
+        }
+        
+        
+    }.resume()
+}
+
+
+
+struct testView_Previews: PreviewProvider {
+    static var previews: some View {
+        testView()
+    }
+}
