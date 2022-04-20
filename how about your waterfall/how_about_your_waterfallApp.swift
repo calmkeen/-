@@ -11,7 +11,9 @@ import SwiftUI
 struct how_about_your_waterfallApp: App {
     var body: some Scene {
         WindowGroup {
-            alamofire()
+            MenuTabView()
+//            MenuTabView()
+//                .environmentObject(RequestAPI())
         }
     }
 }
